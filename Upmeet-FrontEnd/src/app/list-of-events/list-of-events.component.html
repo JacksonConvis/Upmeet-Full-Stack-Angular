@@ -1,0 +1,5 @@
+<p>list-of-events works!</p>
+
+<li *ngFor="let Event of events; let i = index"> {{Event.name}} <button (click)="showDetails(i+1)">Show Details</button></li>
+<p></p>
+<div>{{eD?.name}} {{eD?.description}} ${{eD?.price}}</div>

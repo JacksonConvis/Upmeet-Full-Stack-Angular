@@ -72,13 +72,6 @@ public class EventApiController {
 		event.setId(id);
 		return repo.save(event);
 	}
-	/*
-	@ResponseBody
-	@ExceptionHandler(OrderNotFoundException.class)
-	@ResponseStatus(HttpStatus.NOT_FOUND)
-	String characterNotFoundHandler(OrderNotFoundException ex) {
-		return ex.getMessage();
-	}
-	*/
+	
 }
 
