@@ -1,8 +1,9 @@
 import { Event } from "../event";
 import { Component, OnInit } from "@angular/core";
-import { Router } from '@angular/router';
+
 import { EventAPIService } from '../event-api.service';
 import { favorite } from "../favorite";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-list-of-events',

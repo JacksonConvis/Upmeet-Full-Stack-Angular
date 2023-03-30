@@ -19,6 +19,10 @@ export class EventAPIService {
   getAllEvents(): Observable<Event[]> {
     return this.http.get<Event[]>(`${this.baseURL}`);
   };
+
+  getAllFave(): Observable<favorite[]> {
+    return this.http.get<favorite[]>(`${this.faveURL}`);
+  };
   // GET /books?ownerId=...
  // getBooksByOwner(ownerId: number): Observable<Event[]> {
   //  return this.http.get<Event[]>(`${this.baseURL}`, {
@@ -40,7 +44,9 @@ export class EventAPIService {
     return this.http.post<favorite>(`${this.faveURL}`, newFave);
   };
 
-  deleteEvent(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.baseURL}/${id}`);
+  removeFaves(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.faveURL}/${id}`);
   };
+
+  
 }
