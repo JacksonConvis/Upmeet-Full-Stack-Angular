@@ -2,15 +2,17 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Event } from "./event";
+import { favorite } from "./favorite";
+import { __param } from "tslib";
 
 @Injectable({
   providedIn: "root",
 })
 export class EventAPIService {
   apiBaseUrl: string = "http://localhost:8080";
-  // The base URL points to our Java Spring Boot backend.
-  // This is set in environment.ts. It could be localhost or it could be deployed on AWS.
+  // ^ this points to spring boot api backend
   baseURL: string = this.apiBaseUrl + "/events";
+  faveURL: string = this.apiBaseUrl + "/favorites";
 
   constructor(private http: HttpClient) {}
 
@@ -33,10 +35,11 @@ export class EventAPIService {
   // All of these still return an observable. We must subscribe in the component in
   // order to trigger the actual API call.
   
-  addEvent(newEvent: Event): Observable<Event> {
+  addFavorite(newFave: favorite): Observable<favorite> {
     // For POST, pass the body data as a second parameter after the URL
-    return this.http.post<Event>(`${this.baseURL}`, newEvent);
+    return this.http.post<favorite>(`${this.faveURL}`, newFave);
   };
+
   deleteEvent(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseURL}/${id}`);
   };

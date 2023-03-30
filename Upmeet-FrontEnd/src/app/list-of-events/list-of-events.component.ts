@@ -2,6 +2,7 @@ import { Event } from "../event";
 import { Component, OnInit } from "@angular/core";
 import { Router } from '@angular/router';
 import { EventAPIService } from '../event-api.service';
+import { favorite } from "../favorite";
 
 @Component({
   selector: 'app-list-of-events',
@@ -11,6 +12,7 @@ import { EventAPIService } from '../event-api.service';
 export class ListOfEventsComponent implements OnInit {
     events: Event[] = [];
     eD: Event | undefined;
+    faveN: favorite = ({} as any) as favorite;
   
 
     constructor(private apiService: EventAPIService, private router: Router) {}
@@ -34,9 +36,17 @@ export class ListOfEventsComponent implements OnInit {
      this.apiService.getEventById(i).subscribe((data: Event) => {
       this.eD = data;
     });
-
     };
 
+    makeFavorite(event: Event, fave: favorite){
+      fave.id = event.id;   
+      fave.name = event.name;
+      fave.description = event.description;
+      fave.price = event.price;
+
+      this.apiService.addFavorite(fave).subscribe(() => this.loadEvents());
+    
+    }
   
   
    // addBookToShelf(book: Book): void {

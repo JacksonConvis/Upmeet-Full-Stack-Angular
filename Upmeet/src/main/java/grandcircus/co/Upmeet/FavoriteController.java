@@ -9,68 +9,56 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 @CrossOrigin 
-public class EventApiController {
+public class FavoriteController{
 
 	@Autowired
-	private EventRepository repo;
+	private FavoritesRepository repo;
 	
-	
-	@RequestMapping("/")
-	public Map<String, Object> home() {
-		Map<String, Object> result = new LinkedHashMap<>();
-		result.put("status", "OK");
-		result.put("collections", new String[] { "/events" });
-		return result;
-	}
 	
 	//Read All
-	@GetMapping("/events")
-	public List<Event> readAll() {
+	@GetMapping("/favorites")
+	public List<Favorite> readAll() {
 			return repo.findAll();
 	}
 	
 	//Read One
-	@GetMapping("/events/{id}")
-	public Optional<Event> readOne(@PathVariable("id") Long id) {
+	@GetMapping("/favorites/{id}")
+	public Optional<Favorite> readOne(@PathVariable("id") Long id) {
 		return repo.findById(id);
 	}
 	
 	//Create
-	@PostMapping("/events")
+	@PostMapping("/favorites")
 	@ResponseStatus(HttpStatus.CREATED)
-	public Event create(@RequestBody Event event) {
-		repo.save(event);
-		return event;
+	public Favorite create(@RequestBody Favorite favorite) {
+		repo.save(favorite);
+		return favorite;
 	}
 	
 	//Delete
-	@DeleteMapping("/events/{id}")
+	@DeleteMapping("/favorites/{id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable("id") Long id) {
 		repo.deleteById(id);
 	}
 	
 	//Update
-	@PutMapping("/events/{id}")
-	public Event update(@PathVariable("id") Long id,
-			@RequestBody Event event) {
-		event.setId(id);
-		return repo.save(event);
+	@PutMapping("/favorites/{id}")
+	public Favorite update(@PathVariable("id") Long id,
+			@RequestBody Favorite favorite) {
+		favorite.setId(id);
+		return repo.save(favorite);
 	}
 	
 }
