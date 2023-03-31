@@ -27,9 +27,9 @@ export class ListOfFavesComponent implements OnInit {
    
   };
 
-  deleteFaves(i:number): void{
+  deleteFaves(id:number): void{
 
-    this.apiService.removeFaves(i).subscribe(() => 
+    this.apiService.removeFaves(id).subscribe(() => 
     this.loadFaves());
     };
   };

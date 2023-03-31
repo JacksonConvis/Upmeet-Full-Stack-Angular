@@ -1,4 +1,4 @@
 <li *ngFor="let favorite of faves; let i = index"> 
     {{favorite.name}} {{favorite.id}}
-    <button (click)="deleteFaves({{favorite.id}})">Delete Favorites</button> 
+    <button *ngIf="favorite.id" (click)="deleteFaves(favorite.id)">Delete Favorites</button> 
 </li>
