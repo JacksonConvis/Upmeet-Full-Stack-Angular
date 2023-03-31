@@ -1,8 +1,8 @@
-import { Event } from "../event";
+import { Event } from "../interfaces/event";
 import { Component, OnInit } from "@angular/core";
 
-import { EventAPIService } from '../event-api.service';
-import { favorite } from "../favorite";
+import { EventAPIService } from '../services/event-api.service';
+import { favorite } from "../interfaces/favorite";
 import { Router } from "@angular/router";
 
 @Component({

@@ -1,0 +1,20 @@
+<form (ngSubmit)="onSubmit()">
+    <label>
+        ID:
+    <input type="number" name="id" [(ngModel)]="newEvent.id">
+      </label>
+    <label>
+      Name:
+      <input type="text" name="name" [(ngModel)]="newEvent.name">
+    </label>
+    <label>
+      Description:
+      <textarea name="description" [(ngModel)]="newEvent.description"></textarea>
+    </label>
+    <label>
+      Price:
+      <input type="number" name="price" [(ngModel)]="newEvent.price">
+    </label>
+    <button type="submit">Add Event</button>
+  </form>
+  
