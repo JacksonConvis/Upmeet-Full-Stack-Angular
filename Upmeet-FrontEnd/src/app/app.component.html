@@ -1,3 +1,25 @@
-<app-list-of-events></app-list-of-events>
-<app-list-of-faves></app-list-of-faves>
-<app-add-event></app-add-event>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="nav" href="../app/styles.css">
+</head>
+<body>
+    <nav>
+        <!---Logo----------------------------->
+        <a href="index.html" class="logo">UPMEET</a>
+        <!---Menu----------------------------->
+        <ul class="menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#app-list-of-events">Events</a></li>
+            <li><a href="about.html">Favorites</a></li>
+        </ul>
+        <app-list-of-events id="#app-list-of-events"></app-list-of-events>
+        <app-list-of-faves></app-list-of-faves>
+        <!---Contact----------------------------->
+        <a href="https://www.linkedin.com/in/cedric-boswell/overlay/contact-info/" class="nav-contact-btn">Add New Event</a>
+    </nav>
+    <app-add-event></app-add-event>
+</body>
+</html>

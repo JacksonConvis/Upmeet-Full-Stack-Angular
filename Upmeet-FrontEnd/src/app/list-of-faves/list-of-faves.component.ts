@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EventAPIService } from '../services/event-api.service';
-import { favorite } from '../interfaces/favorite';
+import { favorite } from '../services/favorite';
 
 @Component({
   selector: 'app-list-of-faves',

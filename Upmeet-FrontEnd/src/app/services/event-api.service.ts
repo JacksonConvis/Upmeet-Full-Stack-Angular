@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { Event } from "../interfaces/event";
-import { favorite } from "../interfaces/favorite";
+import { Event } from "./event";
+import { favorite } from "./favorite";
 import { __param } from "tslib";
 
 @Injectable({

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { EventAPIService } from '../services/event-api.service';
-import { Event } from '../interfaces/event';
+import { Event } from '../services/event';
 
 @Component({
   selector: 'app-add-event',

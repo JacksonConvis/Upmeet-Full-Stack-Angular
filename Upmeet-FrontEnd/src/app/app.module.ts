@@ -7,6 +7,12 @@ import { AppComponent } from './app.component';
 import { ListOfEventsComponent } from './list-of-events/list-of-events.component';
 import { ListOfFavesComponent } from './list-of-faves/list-of-faves.component';
 import { AddEventComponent } from './add-event/add-event.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'events', component: AddEventComponent },
+];
 
 @NgModule({
   declarations: [
@@ -15,7 +21,8 @@ import { AddEventComponent } from './add-event/add-event.component';
     ListOfFavesComponent,
     AddEventComponent
   ],
-  imports: [BrowserModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, HttpClientModule, FormsModule,RouterModule.forRoot(routes)],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
