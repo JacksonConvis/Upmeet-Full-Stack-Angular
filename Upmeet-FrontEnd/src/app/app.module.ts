@@ -11,7 +11,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'events', component: AddEventComponent },
+  { path: 'faves', component: ListOfFavesComponent },
+  { path: 'events', component: ListOfEventsComponent },
+  { path: 'add', component: AddEventComponent },
 ];
 
 @NgModule({

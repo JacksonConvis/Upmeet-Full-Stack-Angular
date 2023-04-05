@@ -12,14 +12,17 @@
         <!---Menu----------------------------->
         <ul class="menu">
             <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="#app-list-of-events">Events</a></li>
-            <li><a href="about.html">Favorites</a></li>
+            <li><a routerLink="/events">Events</a></li>
+            <li><a routerLink="/faves">Favorites</a></li>
+            <li><a routerLink="/add">Add Events</a></li>
         </ul>
-        <app-list-of-events id="#app-list-of-events"></app-list-of-events>
-        <app-list-of-faves></app-list-of-faves>
+        <!-- <app-list-of-events id="#app-list-of-events"></app-list-of-events>
+        <app-list-of-faves></app-list-of-faves> -->
         <!---Contact----------------------------->
+        <!-- <button (click)="goToPage('Event')">Go to Event Page</button> -->
         <a href="https://www.linkedin.com/in/cedric-boswell/overlay/contact-info/" class="nav-contact-btn">Add New Event</a>
     </nav>
-    <app-add-event></app-add-event>
+    <!-- <app-add-event></app-add-event> -->
+    <router-outlet></router-outlet>
 </body>
 </html>
