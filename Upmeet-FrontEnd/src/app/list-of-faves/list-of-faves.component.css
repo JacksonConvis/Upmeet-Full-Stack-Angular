@@ -1,4 +1,5 @@
 li {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,10 +9,15 @@ li {
   }
   
   li button {
-    background-color: #4CAF50;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: red;
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
+  }
+
+ li button:hover {
+    background-color: black;
   }
   
