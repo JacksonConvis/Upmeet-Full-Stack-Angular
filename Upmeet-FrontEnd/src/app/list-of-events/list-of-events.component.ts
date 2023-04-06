@@ -48,14 +48,5 @@ export class ListOfEventsComponent implements OnInit {
       this.apiService.addFavorite(fave).subscribe(() => this.loadEvents());
     
     }
-  
-  
-   // addBookToShelf(book: Book): void {
-   //   this.bookService.addBook(book).subscribe(() => this.loadBooks());
-  //  };
-  
-  //  removeBookFromShelf(id: number): void {
-  //    this.bookService.deleteBook(id).subscribe(() => this.loadBooks());
- //   };
   }
 
