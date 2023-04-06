@@ -1,0 +1,24 @@
+//This will set up a default database with some tables and some events to populate it with.
+
+-- Create database Upmeet;
+--  create table events (
+-- id int auto_increment,
+-- name varchar(30),
+-- description varchar(90),
+-- price int,
+-- primary key(id)
+-- );
+-- create table favorites (
+-- id int auto_increment,
+-- name varchar(30),
+-- description varchar(90),
+-- price int,
+-- primary key(id)
+-- );
+
+-- insert into events (name, description, price)
+-- Values('Grand Circus Tech Meetup', '5/7/23 Come learn about all the courses Grand Circus has to offer', 75),
+-- ('Tigers opening game', '4/6/23 First game of the season!', 50),
+-- ('Kendrick Lamar concert', '4/8/23 Mr Morale and the Big Steppers tour', 125),
+-- ('Grand Circus Graduation', '5/5/23', 0),
+-- ('Drake Concert', '6/8/23 Its All A Blur Tour', 90);
