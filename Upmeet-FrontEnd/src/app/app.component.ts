@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import {} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Upmeet-FrontEnd';
 
-  // constructor(private router:string){}
-
-  // goToPage(pageName:string):void{
-  //   this.router.navigate(['${pageName}']);
-  // }
-
+ 
 }
