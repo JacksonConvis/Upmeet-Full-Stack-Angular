@@ -1,9 +1,18 @@
-
-
+<h2>Event List</h2>
+<h3>All of your stored events</h3>
+<p>Use the show details feature to display extra infromation about the event.</p>
+<p>Mark an event to store in your favorites list.</p>
 <li *ngFor="let Event of events; let i = index"> {{Event.name}} 
     <button (click)="showDetails(i+1)">Show Details</button> 
-    <button (click)="makeFavorite(Event, faveN)">Mark as favorite</button> </li>
-<p></p>
-<div>{{eD?.name}} {{eD?.description}} ${{eD?.price}}</div>
+    <button (click)="makeFavorite(Event, faveN)">Mark as favorite</button> 
+</li>
+<h3> </h3>
+<h3>Description:</h3>
+<div>
+    <h3 style="display: inline;">Event: </h3>{{eD?.name}} <br>
+    <h3 style="display: inline;">Notes: </h3>{{eD?.description}}<br>
+    <h3 style="display: inline;">Price: </h3> ${{eD?.price}}
+  </div>
+  
 
 

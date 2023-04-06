@@ -1,3 +1,7 @@
+<h2>Favorites List</h2>
+<h3>Here is a list of all of your favorite events</h3>
+<p>If the event has been completed, use the button to delete it.</p>
+
 <li *ngFor="let favorite of faves; let i = index" class="favorite-item">
     {{favorite.name}} 
     <button *ngIf="favorite.id" (click)="deleteFaves(favorite.id)">Delete Favorites</button> 

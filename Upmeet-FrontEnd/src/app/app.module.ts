@@ -8,12 +8,14 @@ import { ListOfEventsComponent } from './list-of-events/list-of-events.component
 import { ListOfFavesComponent } from './list-of-faves/list-of-faves.component';
 import { AddEventComponent } from './add-event/add-event.component';
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'faves', component: ListOfFavesComponent },
   { path: 'events', component: ListOfEventsComponent },
   { path: 'add', component: AddEventComponent },
+  { path: 'home', component: HomeComponent },
 ];
 
 @NgModule({
@@ -21,7 +23,8 @@ const routes: Routes = [
     AppComponent,
     ListOfEventsComponent,
     ListOfFavesComponent,
-    AddEventComponent
+    AddEventComponent,
+    HomeComponent
   ],
   imports: [BrowserModule, HttpClientModule, FormsModule,RouterModule.forRoot(routes)],
   exports: [RouterModule],

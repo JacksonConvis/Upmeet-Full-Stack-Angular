@@ -74,29 +74,3 @@ nav .nav-contact-btn:hover {
   color: black;
 }
 
-h2 {
-  font-size: 2em;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 1em;
-}
-
-h3 {
-  font-size: 1em;
-  font-weight: bold;
-  text-align: center;
-  margin-top: -0.5em;
-}
-
-p {
-  font-size: 1.2em;
-  text-align: center;
-  margin: 1em auto;
-  max-width: 80%;
-  line-height: 1.5;
-}
-
-h2, h3, p {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  
-}

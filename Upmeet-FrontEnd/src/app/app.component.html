@@ -11,7 +11,7 @@
         <a href="index.html" class="logo">UPMEET</a>
         <!---Menu----------------------------->
         <ul class="menu">
-            <li><a href="index.html" class="active">Home</a></li>
+            <li><a routerLink="/home" class="active">Home</a></li>
             <li><a routerLink="/events">Events</a></li>
             <li><a routerLink="/faves">Favorites</a></li>
             <li><a routerLink="/add">Add Events</a></li>
@@ -21,10 +21,7 @@
         <!---Contact----------------------------->
         <!-- <button (click)="goToPage('Event')">Go to Event Page</button> -->
     </nav>
-    <h2>Welcome to UPMEET</h2>
-    <h3>The best place to store your events!</h3>
-    <p>Here you can view a list of events tracked by a SQL database and perform operations on them using a Java api. </p>
-    <p>The options include, being able to save an event as a favorite, view the list of favorite events, while also being able to add new events to the database.</p>
+   
     <!-- <app-add-event></app-add-event> -->
     <router-outlet></router-outlet>
 </body>
